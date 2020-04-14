@@ -1,0 +1,39 @@
+@model User
+@{
+    ViewData["Title"] = "New User";
+}
+
+<h1 class="display-4">Enter your information</h1>
+
+@* asp-action matches the Controller Method, asp-controller matches the partial Controller name *@
+@* ex) the code below sends everything in form to HomeController's Create() method *@
+<form asp-action="Create" asp-controller="Home" method="post">
+    <div>
+        <span asp-validation-for="FirstName" class="error-msg"></span>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName">
+    </div>
+    <div>
+        <span asp-validation-for="LastName" class="error-msg"></span>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName">
+    </div>
+    <div>
+        <span asp-validation-for="Age" class="error-msg"></span>
+        <label asp-for="Age"></label>
+        <input asp-for="Age">
+    </div>
+    <div>
+        <span asp-validation-for="Email" class="error-msg"></span>
+        <label asp-for="Email"></label>
+        <input asp-for="Email">
+    </div>
+    <div>
+        <span asp-validation-for="Password" class="error-msg"></span>
+        <label asp-for="Password"></label>
+        <input asp-for="Password">
+    </div>
+    
+
+    <input value="Add User" type="submit">    
+</form>
