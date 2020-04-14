@@ -1,4 +1,7 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using form_submission.Validations;
+
 namespace form_submission.Models
 {
     public class User
@@ -26,22 +29,13 @@ namespace form_submission.Models
         [MinLength(8)]
         [DataType(DataType.Password)]
         public string Password {get; set;}
+
+        [PastDate]
+        public DateTime Birthdate {get; set;}
         
         // ~~~~~~~~~~Constructors~~~~~~~~~~
-        // public User() { }
-        // public User(string firstName, string lastName, int age, string email, string password)
-        // {
-        //     FirstName = firstName;
-        //     LastName = lastName;
-        //     Age = age;
-        //     Email = email;
-        //     Password = password;
-        // }
+        // None, because we're doing it through asp-for in the view!
 
         // ~~~~~~~~~~ Other Functions ~~~~~~~~~~
-        // public string String()
-        // {
-        //     return FullName + " from " + Location + " likes " + Language + ". They said " + Comment + ".";
-        // }
     }
 }

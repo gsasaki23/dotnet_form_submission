@@ -11,22 +11,28 @@
     <div>
         <span asp-validation-for="FirstName" class="error-msg"></span>
         <label asp-for="FirstName"></label>
-        <input asp-for="FirstName">
+        <input asp-for="FirstName" placeholder="ex: First">
     </div>
     <div>
         <span asp-validation-for="LastName" class="error-msg"></span>
         <label asp-for="LastName"></label>
-        <input asp-for="LastName">
+        <input asp-for="LastName" placeholder="ex: Last">
     </div>
     <div>
         <span asp-validation-for="Age" class="error-msg"></span>
         <label asp-for="Age"></label>
-        <input asp-for="Age">
+        <input asp-for="Age" placeholder="ex: 69">
+    </div>
+    <div>
+        <span asp-validation-for="Birthdate" class="error-msg"></span>
+        <label asp-for="Birthdate"></label>
+        @* usually asp-for handles types but in this case we wanted to remove the time part of datetime! *@
+        <input asp-for="Birthdate" type="date">
     </div>
     <div>
         <span asp-validation-for="Email" class="error-msg"></span>
         <label asp-for="Email"></label>
-        <input asp-for="Email">
+        <input asp-for="Email" placeholder="ex: first.last@gmail.com">
     </div>
     <div>
         <span asp-validation-for="Password" class="error-msg"></span>
